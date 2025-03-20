@@ -39,17 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Responsive nav toggle
-    const navToggle = document.createElement('button');
-    navToggle.innerHTML = '☰';
-    navToggle.className = 'nav-toggle';
-    document.querySelector('.navbar').appendChild(navToggle);
-    
-    navToggle.addEventListener('click', () => {
-        const nav = document.querySelector('.nav-links');
-        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    });
-
     document.querySelector('.contact-form').addEventListener('submit', (e) => {
         e.preventDefault();
         // Add form submission logic
