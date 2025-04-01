@@ -80,6 +80,10 @@ h1 {
     margin-bottom: 1rem;
 }
 
+.carousel-container {
+    overflow: hidden;
+}
+
 section > h2, .carousel-container > h2 {
     padding-left: 1rem;
 }
@@ -96,7 +100,6 @@ section > h2, .carousel-container > h2 {
     height: 150%;
     background: var(--gradient);
     opacity: 0.2;
-    animation: gradientFlow 15s ease infinite;
 }
 
 .features {
@@ -128,10 +131,22 @@ section > h2, .carousel-container > h2 {
 }
 
 .thumbnail {
+    width: 100%;
     height: 180px;
     border-radius: 8px;
     background: var(--gradient);
     margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.thumbnail video {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .opportunity-grid {
@@ -205,12 +220,6 @@ section > h2, .carousel-container > h2 {
 
 .pulse {
     animation: pulse 2s infinite;
-}
-
-@keyframes gradientFlow {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(180deg); }
-    100% { transform: rotate(360deg); }
 }
 
 @keyframes carousel-scroll {
