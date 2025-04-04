@@ -43,6 +43,8 @@ body {
 }
 
 .hero {
+    background-image: url('./media/img/logos/meta_eyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ==.webp');
+    background-size: cover;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -96,8 +98,8 @@ section > h2, .carousel-container > h2 {
 
 .gradient-overlay {
     position: absolute;
-    width: 150%;
-    height: 150%;
+    width: 2000%;
+    height: 2000%;
     background: var(--gradient);
     opacity: 0.2;
 }
