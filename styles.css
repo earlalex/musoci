@@ -4,9 +4,11 @@
     --black: #000000;
     --gradient: linear-gradient(135deg, var(--deep-blue) 0%, var(--magenta-purple) 100%);
 }
+
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -52,7 +54,14 @@ body {
     position: relative;
     overflow: hidden;
 }
-
+.hero video {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
 .hero-content {
     text-align: center;
     z-index: 1;
@@ -73,7 +82,14 @@ body {
 }
 
 .intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 4rem;
+}
+
+.intro-section p {
+    max-width: 1000px;
 }
 
 h1 {
@@ -145,6 +161,7 @@ section > h2, .carousel-container > h2 {
 .thumbnail video {
     min-width: 100%;
     min-height: 100%;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
