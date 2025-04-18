@@ -83,6 +83,7 @@ body {
 
 .intro-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 4rem;
@@ -210,6 +211,29 @@ section > h2, .carousel-container > h2 {
     padding: 8rem 5%;
     position: relative;
     background: rgba(255,255,255,0.05);
+    background-image: url('/media/img/story-section.jpg');
+    background-size: cover;
+}
+
+.opportunity-icon.content {
+    background-image: url('/media/img/contentdistro.jpg');
+    background-size: cover;
+    width: 100%;
+    min-height: 200px;
+}
+
+.opportunity-icon.fan {
+    background-image: url('/media/img/fanengagement.jpg');
+    background-size: cover;
+    width: 100%;
+    min-height: 200px;
+}
+
+.opportunity-icon.monetize {
+    background-image: url('/media/img/monetizing.jpg');
+    background-size: cover;
+    width: 100%;
+    min-height: 200px;
 }
 
 .content-grid {
@@ -227,9 +251,20 @@ section > h2, .carousel-container > h2 {
 }
 
 .cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 8rem 5%;
-    background: var(--gradient);
+    min-height: 600px;
+    background-image: url('/media/img/cta-section.jpg');
+    background-size: cover;
+}
+
+.cta-section span {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
 }
 
 .content-carousel {
@@ -295,11 +330,38 @@ section > h2, .carousel-container > h2 {
     margin-top: 1rem;
 }
 
+.partner-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-header p {
+    font-size: .8rem;
+    opacity: .5;
+}
+
+.partner-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+    grid-gap: 5px;
+}
+
+.partner-logos .logo-default {
+    background-image: url('/media/img/logos/old_logo.png');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
