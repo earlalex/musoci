@@ -16,6 +16,9 @@ body {
     color: white;
     line-height: 1.6;
 }
+.page {
+    padding: 2rem;
+}
 
 .navbar {
     display: flex;
@@ -177,6 +180,7 @@ section > h2, .carousel-container > h2 {
 }
 
 .opportunity-icon {
+    background-position: center;
     width: 60px;
     height: 60px;
     fill: url(#brand-gradient);
@@ -219,21 +223,21 @@ section > h2, .carousel-container > h2 {
     background-image: url('/media/img/contentdistro.jpg');
     background-size: cover;
     width: 100%;
-    min-height: 200px;
+    min-height: 100px;
 }
 
 .opportunity-icon.fan {
     background-image: url('/media/img/fanengagement.jpg');
     background-size: cover;
     width: 100%;
-    min-height: 200px;
+    min-height: 100px;
 }
 
 .opportunity-icon.monetize {
     background-image: url('/media/img/monetizing.jpg');
     background-size: cover;
     width: 100%;
-    min-height: 200px;
+    min-height: 100px;
 }
 
 .content-grid {
@@ -344,16 +348,32 @@ section > h2, .carousel-container > h2 {
 
 .partner-logos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-auto-rows: 100px;
-    grid-gap: 5px;
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
 }
 
-.partner-logos .logo-default {
+.logo-default {
     background-image: url('/media/img/logos/old_logo.png');
-    background-size: cover;
-    width: 100px;
-    height: 100px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+}
+
+.logo-a4ce {
+    background-image: url('/media/img/logos/ace_logo_horizontal_white-blue.svg');
+    width: 250px;
+}
+
+.logo-wau {
+    background-color: #fff;
+    background-image: url('/media/img/logos/logo-wau.png');
+}
+
+.logo-earlalex {
+    background-image: url('/media/img/logos/earl-alex-logo.png');
 }
 
 footer {
