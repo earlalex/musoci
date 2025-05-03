@@ -83,6 +83,17 @@ body {
     color:#2082C5;
     font-weight: 900;
 }
+details summary {
+    font-size: 2rem;
+}
+.header-menu {
+    width: 300px;
+}
+.header-menu span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .intro-section {
     display: flex;
