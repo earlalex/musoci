@@ -395,3 +395,8 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+@media (min-width: 768px) {
+    .partner-logos {
+        grid-auto-flow: column;
+    }
+}
