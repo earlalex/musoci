@@ -1,0 +1,307 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indie Talent Network - MuSoci LLC</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link ref="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@600&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        
+:root {
+    --deep-blue: #2082C5;
+    --magenta-purple: #A12B91;
+    --black: #000000;
+    --gradient: linear-gradient(135deg, var(--deep-blue) 0%, var(--magenta-purple) 100%);
+}
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+.card_image {
+  position: relative;
+  max-height: 250px;
+}
+
+.card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card_price {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 45px;
+  border-radius: 0.25rem;
+  background-color: var(--deep-blue);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card_price span {
+  font-size: 12px;
+  margin-top: -2px;
+}
+
+.note {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 4px 8px;
+  border-radius: 0.25rem;
+  background-color: var(--magenta-purple);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.main > h2 {
+    color: #fff;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #000000;
+}
+
+.card_content {
+  position: relative;
+  padding: 16px 12px 32px 24px;
+  margin: 16px 8px 8px 0;
+  max-height: 290px;
+  overflow-y: scroll;
+}
+
+.card_content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.card_content::-webkit-scrollbar-track {
+  box-shadow: 0;
+  border-radius: 0;
+}
+
+.card_content::-webkit-scrollbar-thumb {
+  background-color: var(--black);
+  border-radius: 15px;
+}
+
+.card_title {
+  position: relative;
+  margin: 0 0 24px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card_title::after {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--gradient);
+  content: "";
+}
+
+hr {
+  margin: 24px auto;
+  width: 50px;
+  border-top: 2px solid var(--gradient);
+}
+
+.card_text p {
+  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.card_text p:last-child {
+  margin: 0;
+}
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <a href="/" class="brand-logo">
+            <img src="/media/img/logos/musoci-logo.png" alt="Musoci Logo" class="logo-image">
+        </a>
+        <section class="header-cta">
+            <a href="https://apps.apple.com/us/app/indie-talent-network/id6740873420"><img src="/media/img/apple-app-store.png" alt="apple app store download" width="200px"></a>
+            <a class="cta-tel" href="tel:8776466738">877-646-6738</a>
+        </section>
+    </header>
+    <section class="page">
+        <h1>For Your Entertainment</h1>
+        <div class="main">
+            <h2>Viewers</h2>
+            <ul class="cards">
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="../media/img/free-pass.jpg" alt="MuSocÍ Free Discovery Pass" />
+                    <span class="card_price">Free</span>
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">MuSocÍ Free Discovery Pass</h2>
+                    <div class="card_text">
+                      <p>Discover the next generation of entertainment! Immerse yourself in space where music, movies, audiobooks, & social media unite.   Feature curated content & options to unlock levels of engagement with your favorite content creators!</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+          
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="../media/img/musoci-member.jpg" alt="a Reuben sandwich on wax paper." />
+                    <span class="card_price"><span>$</span>$2.99 mo</span>
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">MuSocÍ Member</h2>
+                    <div class="card_text">
+                      <p>MEMBERSHIP PASS TO THE FIRST FLOOR ...Unlock the first tier of exclusive content, and innovative entertainment.  Interact with your favorite influencers on the Fandelirius channel.  This enables you to send in video messages, questions, requests, and even vote them into Prime Time Air Time!  Your requests will be aired LIVE.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+          
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="../media/img/eros-ladder.jpg" alt="A side view of a plate of figs and berries." />
+                    <span class="card_price"><span>$</span>3.99 mo</span>
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">Eros Ladder</h2>
+                    <div class="card_text">
+                      <p>A bold, late-night channel dedicated to showcasing the art of erotic entertainment.  Subscribers gain exclusive access to a curated collection of steamy, edgy adult content - featuring seductive performances, provocative storytelling, and boundary-pushing visuals.  Designed for those who crave something daring after dark, Eros Ladder invites viewers to climb into a world where sensuality takes center stage.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <h2>Creators</h2>
+            <ul class="cards">
+            <li class="cards_item">
+                <div class="card">
+                <div class="card_image">
+                    <img src="../media/img/playlister.jpg" alt="A side view of a plate of figs and berries." />
+                    <span class="card_price"><span>$</span>29.99yr</span>
+                </div>
+                <div class="card_content">
+                    <h2 class="card_title">Playlister</h2>
+                    <div class="card_text">
+                    <p>Unlimited audio or video submissions to music and on demand channels.  Customer feedback & rating levels to unlock more fanbase & prime time features.
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="../media/img/creators-club.jpg" alt="A side view of a plate of figs and berries." />
+                    <span class="card_price"><span>$</span>49.99 mo</span>
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">MuSocÍ Creator's Club</h2>
+                    <div class="card_text">
+                      <p>Your VOD channel on Roku, Amazon Fire TV, iPhone Mobile, PPV, Monetization, Social Media Livestream, Analytics, Global Distribution. Royalties, Plreview channel placement
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+          
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <span class="note">Attention Erotic Entertainers!</span>
+                    <img src="../media/img/eros-ladder-vip.jpg" alt="A side view of a plate of figs and berries." />
+                    <span class="card_price"><span>$</span>9.99mo</span>
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">Eros Ladder VIP Creator Membership</h2>
+                    <div class="card_text">
+                      <p>For the Visionaries, the Risk Takers, the erotic Icons in the Making.  Welcome to the top tier of more creative freedom and exposure-Eros VIP.  More than a membership, it's a launchpad for your sensual storytelling, & a path to real growth, visibility, and income.  Unlimited content submissions, advance audience growth, detailed monthly analytics, content monetization & featured content slots.  Broadcast reach on Roku, Amazon Fire TV, & IOS apps. Eros VIP memberships partake from a profit-sharing pool based on monthly subscribers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <hr>
+    </section>
+    <section style="background-image: url('../media/img/fandelirius.jpg');background-size: cover;padding:1rem;">
+        <div style="background-color: rgba(0,0,0,0.6); padding: 1rem;">
+            <h2>Fandelirius</h2>
+            <hr>
+            <p style="padding: 1rem;"><span><span>$</span>4.99</span> Your audience connection with FanDelirious, the ultimate engagement tool for creators.  With this add-on, your fans can submit requests, questions, & personalized prompts—giving them a direct line to you and your content.  Whether it's inspiration for your next scene or intimate Q&A moments, FanDelirious helps you build deeper bonds, boost loyalty, & grow a fiercely dedicated following.</p>
+        </div>
+    </section>
+    <section>
+        <iframe src="https://tvstartupcms.com/clients/74dd60ab-1436-4072-b2d1-862603355b1a/sign-up.html?channelId=6ee8f081-d92c-4680-b12c-96d9884e6b06" frameBorder="0" width="100%" height="600"></iframe>
+    </section>
+    <footer>
+        <p><a href="./privacy.html">Privacy Policy</a> | <a href="./terms.html">Terms of Service</a> | <a href="./pages/refund.html">Refund Policy</a></p>
+        <p>Contact Us By Phone: <a class="cta-tel" href="tel:8776466738">877-646-6738</a></p>
+        <p>We accept Visa, Mastercard & AMEX</p>
+        <div style="width: 150px;"><img src="../media/img/logos/card-logos.png" style="width: 100%;" alt=""></div>
+        <p>© 2025 Copyright. All rights reserved. | Musoci</p>
+    </footer>
+</body>
+</html>
