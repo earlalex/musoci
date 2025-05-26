@@ -71,6 +71,60 @@ class Header extends BaseComponent {
             font-size: 2rem;
             cursor: pointer;
             text-align: center;
+            list-style: none;
+            }
+            details summary::before {
+            content: "☰";
+            font-size: 2rem;
+            transition: transform 0.3s ease;
+            display: inline-block;
+            }
+            details[open] summary::before {
+            transform: rotate(90deg);
+            }
+            details summary::-webkit-details-marker {
+            display: none;
+            }
+            .header-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+            background-color: var(--deep-blue);
+            padding: 1rem 0;
+            animation: slideDown 0.3s ease-out;
+            }
+            @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            }
+            .header-menu span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+            details {
+              width: 100%;
+            }
+            details summary {
+            font-size: 2rem;
+            cursor: pointer;
+            text-align: center;
+            list-style: none;
+            }
+            details summary::before {
+            content: "☰";
+            font-size: 2rem;
+            }
+            details summary::-webkit-details-marker {
+            display: none;
             }
             a {
             color: white;
@@ -84,6 +138,7 @@ class Header extends BaseComponent {
             border-top: 1px solid #ccc;
             margin: 1em 0;
             padding: 0;
+            margin: 0;
             }
             @media only screen and (min-width: 600px) {
                 .navbar {
@@ -111,7 +166,6 @@ class Header extends BaseComponent {
             <section class="header-cta">
                 <details>
                 <summary>
-                Menu
                 </summary>
                 <div class="header-menu">
                 <span>
