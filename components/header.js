@@ -10,15 +10,18 @@ class Header extends BaseComponent {
         <style>
             :host {
             display: block;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             }
             .navbar {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             width: 100%;
-            top: 0;
-            z-index: 1000;
             background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             }
             .brand-logo {
             display: flex;
@@ -169,8 +172,8 @@ class Header extends BaseComponent {
                 </summary>
                 <div class="header-menu">
                 <span>
-                <a href="https://link.clover.com/urlshortener/6JfTy8" style="text-decoration: none;">
-                    Become A Member
+                <a href="https://musocitvnetwork.tvspublishingservice.com/sign-up.html?channelId=6ee8f081-d92c-4680-b12c-96d9884e6b06" style="text-decoration: none;">
+                    Sign-Up
                 </a>
                 </span>
                 <span>
@@ -181,11 +184,6 @@ class Header extends BaseComponent {
                 <span>
                 <a href="./pages/submit.html" style="text-decoration: none;">
                     Submit Content
-                </a>
-                </span>
-                <span>
-                <a href="https://link.clover.com/urlshortener/VcLY26" style="text-decoration: none;">
-                    Creators Club
                 </a>
                 </span>
                 </details>
