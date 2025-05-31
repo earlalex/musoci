@@ -1,11 +1,12 @@
 import { BaseComponent } from './base-component.js';
 
-class HeroSection extends BaseComponent {
+export class PageHero extends BaseComponent {
   constructor() {
     super();
   }
 
   render() {
+    console.log('Page Hero Render Function')
     this.shadowRoot.innerHTML = `
       <style>
         :host {
@@ -98,15 +99,12 @@ class HeroSection extends BaseComponent {
         }
       </style>
       <section class="hero" id="home">
-        <video autoplay loop muted playsinline src="media/vid/hero-vid.mp4"></video>
         <div class="hero-content">
           <div>
             <a class="brand-logo" href="/">
               <img class="logo-image" src="./media/img/logos/musoci-logo.png" alt="Musoci Logo"/>
             </a>
           </div>
-          <h1>Where Creators and Audiences Connect</h1>
-          <p class="slogan">Dive into the vibrant world of entertainment, all on your device</p>
           <a href="https://apps.apple.com/us/app/indie-talent-network/id6740873420">
             <button class="cta-button pulse">Download & Stream</button>
           </a>
@@ -117,4 +115,3 @@ class HeroSection extends BaseComponent {
   }
 }
 
-customElements.define('musoci-hero', HeroSection);

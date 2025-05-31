@@ -22,5 +22,3 @@ export class ContactForm extends BaseComponent {
         `;
     }
 }
-
-customElements.define('musoci-contact', ContactForm);

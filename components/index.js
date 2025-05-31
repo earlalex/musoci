@@ -1,10 +1,21 @@
-import './header.js';
-import './hero-section.js';
-import './intro-section.js';
-import './story-section.js';
-import './content-showcase.js';
-import './cta-section.js';
-import './contact-form.js';
-import './partner-section.js';
-import './creator-opportunities.js';
-import './footer.js';
+import {Header} from './header.js';
+import {IntroSection} from './intro-section.js';
+import {StorySection} from './story-section.js';
+import {ContentShowcase} from './content-showcase.js';
+import {CTASection} from './cta-section.js';
+import {ContactForm} from './contact-form.js';
+import {PartnerSection} from './partner-section.js';
+import {CreatorOpportunities} from './creator-opportunities.js';
+import {Footer} from './footer.js';
+
+export {
+    Header,
+    IntroSection,
+    StorySection,
+    ContentShowcase,
+    CTASection,
+    ContactForm,
+    PartnerSection,
+    CreatorOpportunities,
+    Footer
+}

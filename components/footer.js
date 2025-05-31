@@ -53,5 +53,3 @@ export class Footer extends BaseComponent {
         `;
     }
 }
-
-customElements.define('musoci-footer', Footer);

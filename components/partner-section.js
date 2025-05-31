@@ -49,5 +49,3 @@ export class PartnerSection extends BaseComponent {
         `;
     }
 }
-
-customElements.define('musoci-partners', PartnerSection);

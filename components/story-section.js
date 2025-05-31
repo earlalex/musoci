@@ -1,6 +1,6 @@
 import { BaseComponent } from './base-component.js';
 
-class StorySection extends BaseComponent {
+export class StorySection extends BaseComponent {
     constructor() {
         super();
     }
@@ -73,5 +73,3 @@ class StorySection extends BaseComponent {
         `;
     }
 }
-
-customElements.define('musoci-story', StorySection);

@@ -77,5 +77,3 @@ export class ShowcaseCard extends BaseComponent {
         `;
     }
 }
-
-customElements.define('musoci-showcase-card', ShowcaseCard);

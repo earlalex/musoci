@@ -1,6 +1,6 @@
 import { BaseComponent } from './base-component.js';
 
-class IntroSection extends BaseComponent {
+export class IntroSection extends BaseComponent {
   constructor() {
     super();
   }
@@ -61,5 +61,3 @@ class IntroSection extends BaseComponent {
     `;
   }
 }
-
-customElements.define('musoci-intro', IntroSection);

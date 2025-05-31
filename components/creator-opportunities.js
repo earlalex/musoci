@@ -147,5 +147,3 @@ export class CreatorOpportunities extends BaseComponent {
         `;
   }
 }
-
-customElements.define("musoci-opportunities", CreatorOpportunities);

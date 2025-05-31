@@ -1,6 +1,6 @@
 import { BaseComponent } from './base-component.js';
-import './showcase-card.js';
-
+import { ShowcaseCard } from './showcase-card.js';
+customElements.define('musoci-showcase-card', ShowcaseCard);
 export class ContentShowcase extends BaseComponent {
     constructor() {
         super();
@@ -52,6 +52,12 @@ export class ContentShowcase extends BaseComponent {
                 description: 'Engage with interesting conversation.',
                 videoSrc: './media/vid/musicplaylists.mp4',
                 category: 'audio'
+            },
+            {
+                title: 'Pay Per View',
+                description: 'Watch exclusive content on demand and live.',
+                videoSrc: './media/vid/payperview.mov',
+                category: 'view'
             },
             // Add more showcase items here
         ];
@@ -168,4 +174,3 @@ export class ContentShowcase extends BaseComponent {
     }
 }
 
-customElements.define('musoci-showcase', ContentShowcase);
