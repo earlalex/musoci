@@ -30,7 +30,6 @@ export class HomePage extends BaseComponent {
                 <musoci-story></musoci-story>
                 <musoci-showcase></musoci-showcase>
                 <musoci-opportunities></musoci-opportunities>
-                <musoci-cta></musoci-cta>
                 <musoci-contact></musoci-contact>
                 <musoci-partners></musoci-partners>
         `;
