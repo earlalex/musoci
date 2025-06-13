@@ -173,4 +173,5 @@ export class ContentShowcase extends BaseComponent {
         }
     }
 }
+customElements.define('musoci-showcase', ContentShowcase);
 

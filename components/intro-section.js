@@ -60,4 +60,32 @@ export class IntroSection extends BaseComponent {
       </section>
     `;
   }
+
+  connectedCallback() {
+    // super.connectedCallback(); // If BaseComponent has one
+    this.render(); // Ensure content is rendered before observing
+
+    if (this.shadowRoot.querySelectorAll('.text-block').length > 0) {
+        this.visibilityObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Optional: stop observing after visible
+                }
+            });
+        }, { threshold: 0.1 }); // Adjust threshold as needed
+
+        this.shadowRoot.querySelectorAll('.text-block').forEach(el => {
+            this.visibilityObserver.observe(el);
+        });
+    }
+  }
+
+  disconnectedCallback() {
+    if (this.visibilityObserver) {
+        this.visibilityObserver.disconnect();
+    }
+    // super.disconnectedCallback(); // If BaseComponent has one
+  }
 }
+customElements.define('musoci-intro', IntroSection);

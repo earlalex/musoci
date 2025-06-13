@@ -69,7 +69,7 @@ export class ShowcaseCard extends BaseComponent {
             </style>
             <div class="content-card" data-category="${this._category}">
                 <div class="thumbnail">
-                    <video autoplay loop muted playsinline src="${this._videoSrc}"></video>
+                    <video autoplay loop muted playsinline src="${this._videoSrc}" preload="none"></video>
                 </div>
                 <h3>${this._title}</h3>
                 <p>${this._description}</p>

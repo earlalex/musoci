@@ -1,1 +1,12 @@
-// Initialize content carousel function initCarousel() { const carousel = document.querySelector('.content-carousel'); const cards = Array.from(carousel.children); cards.forEach(card => carousel.appendChild(card.cloneNode(true))); } // Intersection Observer for scroll animations const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if(entry.isIntersecting) { entry.target.classList.add('visible'); } }); }); document.querySelectorAll('.text-block, .feature-card').forEach((el) => { observer.observe(el); }); // Initialize after DOM load document.addEventListener('DOMContentLoaded', () => { // Add smooth scrolling to all links document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); }); }); // Parallax effect for hero section window.addEventListener('scroll', () => { const scrolled = window.pageYOffset; const overlay = document.querySelector('.gradient-overlay'); if (overlay) { overlay.style.transform = `rotate(${scrolled * 0.2}deg) scale(${1 + scrolled * 0.0005})`; } }); document.querySelector('.contact-form').addEventListener('submit', (e) => { e.preventDefault(); // Add form submission logic alert('Thank you for your message! We\'ll respond shortly.'); }); initCarousel(); });
+// Initialize after DOM load
+document.addEventListener('DOMContentLoaded', () => {
+    // Add smooth scrolling to all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});

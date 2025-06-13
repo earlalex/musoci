@@ -7,6 +7,8 @@ export class MainHero extends BaseComponent {
 
   render() {
     console.log('Main Hero Render Function')
+    // Ensure BaseComponent's render is called if it has one.
+    // super.render(); // If BaseComponent has a render method that needs to be called.
     this.shadowRoot.innerHTML = `
       <style>
         :host {
@@ -115,6 +117,36 @@ export class MainHero extends BaseComponent {
         <div class="gradient-overlay"></div>
       </section>
     `;
+  }
+
+  connectedCallback() {
+    // Call super.connectedCallback() if BaseComponent has one.
+    // super.connectedCallback();
+
+    // It's generally safer to access shadowRoot elements after the component's render method has been called.
+    // If render is called in BaseComponent's connectedCallback, this might be fine.
+    // Or, if render is called by this component's connectedCallback, ensure this logic runs after it.
+    // For this component, render() is called by the BaseComponent constructor.
+
+    this.parallaxScrollListener = () => {
+      const overlay = this.shadowRoot.querySelector('.gradient-overlay');
+      if (overlay) {
+        const scrolled = window.pageYOffset;
+        // Check if the component is still in the DOM and visible if performance is an issue.
+        // For simplicity, direct manipulation is used here.
+        overlay.style.transform = `rotate(${scrolled * 0.2}deg) scale(${1 + scrolled * 0.0005})`;
+      }
+    };
+    window.addEventListener('scroll', this.parallaxScrollListener);
+  }
+
+  disconnectedCallback() {
+    // Call super.disconnectedCallback() if BaseComponent has one.
+    // super.disconnectedCallback();
+    window.removeEventListener('scroll', this.parallaxScrollListener);
+    if (this.parallaxScrollListener) {
+      delete this.parallaxScrollListener; // Clean up the reference
+    }
   }
 }
 
