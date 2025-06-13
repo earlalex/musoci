@@ -7,6 +7,7 @@ export class PageHero extends BaseComponent {
 
   render() {
     console.log('Page Hero Render Function')
+    // super.render(); // If BaseComponent has a render method
     this.shadowRoot.innerHTML = `
       <style>
         :host {
@@ -112,6 +113,26 @@ export class PageHero extends BaseComponent {
         <div class="gradient-overlay"></div>
       </section>
     `;
+  }
+
+  connectedCallback() {
+    // super.connectedCallback(); // If BaseComponent has one
+    this.parallaxScrollListener = () => {
+      const overlay = this.shadowRoot.querySelector('.gradient-overlay');
+      if (overlay) {
+        const scrolled = window.pageYOffset;
+        overlay.style.transform = `rotate(${scrolled * 0.2}deg) scale(${1 + scrolled * 0.0005})`;
+      }
+    };
+    window.addEventListener('scroll', this.parallaxScrollListener);
+  }
+
+  disconnectedCallback() {
+    // super.disconnectedCallback(); // If BaseComponent has one
+    window.removeEventListener('scroll', this.parallaxScrollListener);
+    if (this.parallaxScrollListener) {
+      delete this.parallaxScrollListener;
+    }
   }
 }
 

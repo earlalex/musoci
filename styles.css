@@ -8,3 +8,15 @@ iframe{
     width: 100vw; 
     border: none;
 }
+
+/* Animation for .text-block and .feature-card when .visible is added */
+.text-block, .feature-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.text-block.visible, .feature-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
