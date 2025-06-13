@@ -13,7 +13,6 @@ export class Header extends BaseComponent {
     render () {
         
         return this.shadowRoot.innerHTML = `
-            <script>console.log(MainHero, PageHero);</script>
             <musoci-hero></musoci-hero>
             <musoci-navigation></musoci-navigation>
         `;
