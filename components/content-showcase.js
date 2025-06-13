@@ -124,7 +124,7 @@ export class ContentShowcase extends BaseComponent {
                         transform: translateX(0);
                     }
                     to {
-                        transform: translateX(calc(-100% - 2rem));
+                        transform: translateX(calc(-200% - 4rem));
                     }
                 }
             </style>
