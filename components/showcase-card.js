@@ -28,9 +28,12 @@ export class ShowcaseCard extends BaseComponent {
                 }
                 .content-card {
                     background: rgba(255,255,255,0.1);
-                    border-radius: 12px;
                     padding: 1rem;
-                    min-width: 300px;
+                    min-width: 275px;
+                    min-height: fit-content;
+                    margin: 1rem;
+                    border-radius: 12px;
+
                     transition: transform 0.3s ease;
                 }
                 .content-card:hover {
