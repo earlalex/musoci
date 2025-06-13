@@ -64,6 +64,7 @@ export class ContentShowcase extends BaseComponent {
     }
 
     render() {
+        const duplicatedShowcaseData = [...this.showcaseData, ...this.showcaseData];
         this.shadowRoot.innerHTML = `
             <style>
                 :host {
@@ -124,7 +125,7 @@ export class ContentShowcase extends BaseComponent {
                         transform: translateX(0);
                     }
                     to {
-                        transform: translateX(calc(-100% - 2rem));
+                        transform: translateX(calc(-200% - 4rem));
                     }
                 }
             </style>
@@ -132,7 +133,7 @@ export class ContentShowcase extends BaseComponent {
                 <div class="carousel-container">
                     <h2>Explore Trending Content</h2>
                     <div class="content-carousel">
-                        ${this.showcaseData.map(item => `
+                        ${duplicatedShowcaseData.map(item => `
                             <musoci-showcase-card
                                 title="${item.title}"
                                 description="${item.description}"
@@ -170,6 +171,21 @@ export class ContentShowcase extends BaseComponent {
 
         if (isMobile) {
             setTimeout(scroll, 3000);
+        } else {
+            // Desktop: Setup seamless loop for CSS animation
+            carousel.addEventListener('animationiteration', (event) => {
+                if (event.animationName === 'scrollLeft') {
+                    // Temporarily disable animation to reset position
+                    carousel.style.animation = 'none';
+                    requestAnimationFrame(() => {
+                        carousel.style.transform = 'translateX(0)';
+                        requestAnimationFrame(() => {
+                            // Re-enable the animation
+                            carousel.style.animation = 'scrollLeft 30s linear infinite';
+                        });
+                    });
+                }
+            });
         }
     }
 }
