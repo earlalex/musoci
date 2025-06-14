@@ -7,8 +7,6 @@ export class MainHero extends BaseComponent {
 
   render() {
     console.log('Main Hero Render Function')
-    // Ensure BaseComponent's render is called if it has one.
-    // super.render(); // If BaseComponent has a render method that needs to be called.
     this.shadowRoot.innerHTML = `
       <style>
         :host {
@@ -101,7 +99,7 @@ export class MainHero extends BaseComponent {
         }
       </style>
       <section class="hero" id="home">
-        <video autoplay loop muted playsinline src="media/vid/hero-vid.mp4"></video>
+        <video autoplay preload loop muted playsinline src="media/vid/hero-vid.mp4"></video>
         <div class="hero-content">
           <div>
             <a class="brand-logo" href="/">
@@ -120,14 +118,7 @@ export class MainHero extends BaseComponent {
   }
 
   connectedCallback() {
-    // Call super.connectedCallback() if BaseComponent has one.
-    // super.connectedCallback();
-
-    // It's generally safer to access shadowRoot elements after the component's render method has been called.
-    // If render is called in BaseComponent's connectedCallback, this might be fine.
-    // Or, if render is called by this component's connectedCallback, ensure this logic runs after it.
-    // For this component, render() is called by the BaseComponent constructor.
-
+    super.connectedCallback(); 
     this.parallaxScrollListener = () => {
       const overlay = this.shadowRoot.querySelector('.gradient-overlay');
       if (overlay) {

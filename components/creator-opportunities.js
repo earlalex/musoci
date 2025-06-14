@@ -148,7 +148,7 @@ export class CreatorOpportunities extends BaseComponent {
   }
 
   connectedCallback() {
-    // super.connectedCallback(); // If BaseComponent has one
+    super.connectedCallback(); // If BaseComponent has one
     // this.render(); // render() is called by BaseComponent constructor
 
     if (this.shadowRoot.querySelectorAll('.feature-card').length > 0) {

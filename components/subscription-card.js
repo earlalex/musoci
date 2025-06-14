@@ -1,14 +1,41 @@
 import { BaseComponent } from './base-component.js';
 
 class SubscriptionCard extends BaseComponent {
-    constructor(props) {
-        super();
-        this.props = props;
+    static get observedAttributes() {
+        // HTML attributes are case-insensitive.
+        // attributeChangedCallback will receive 'name' in lowercase.
+        return ['imagesrc', 'imagealt', 'price', 'title', 'text', 'note'];
+    }
+
+    constructor() {
+        super(); // BaseComponent initializes this.props = {}
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        // Map lowercase attribute names to camelCase prop keys
+        const attributeToPropMap = {
+            'imagesrc': 'imageSrc',
+            'imagealt': 'imageAlt',
+            'price': 'price',
+            'title': 'title',
+            'text': 'text',
+            'note': 'note'
+        };
+        const propKey = attributeToPropMap[name];
+
+        if (propKey && this.props[propKey] !== newValue) {
+            this.props[propKey] = newValue;
+            // Re-render if the component is connected and has already rendered once.
+            // The initial render is handled by BaseComponent's connectedCallback.
+            if (this.isConnected && this.shadowRoot.firstChild) {
+                this.render();
+            }
+        }
     }
 
     render() {
-        const { imageSrc, imageAlt, price, title, text, note } = this.props;
-
+        // Destructure from this.props, providing defaults for robustness
+        const { imageSrc = 'path/to/default-image.png', imageAlt = 'Subscription image', price = 'N/A', title = 'Subscription Plan', text = 'Details not available.', note = '' } = this.props;
         this.shadowRoot.innerHTML = `
             <style>
                 :host {

@@ -17,7 +17,7 @@ export class MusociApp extends BaseComponent {
         if (!customElements.get('subscriptions-page')) customElements.define('subscriptions-page', SubscriptionsPage);
         if (!customElements.get('submit-content-page')) customElements.define('submit-content-page', SubmitContentPage);
         // Placeholder pages are defined above
-
+        console.log(Header);
         this.routes = {
             'home': HomePage,
             'subscriptions': SubscriptionsPage,
