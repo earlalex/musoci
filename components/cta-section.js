@@ -40,3 +40,4 @@ export class CTASection extends BaseComponent {
         `;
     }
 }
+customElements.define('musoci-cta', CTASection);

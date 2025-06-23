@@ -174,7 +174,7 @@ class SubscriptionCard extends BaseComponent {
             </style>
             <div class="card">
                 <div class="card_image">
-                    <img src="${imageSrc}" alt="${imageAlt}" loading="lazy" />
+                    <img src="${imageSrc}" alt="${imageAlt}" />
                     ${note ? `<span class="note">${note}</span>` : ''}
                     <span class="card_price">${price}</span>
                 </div>
