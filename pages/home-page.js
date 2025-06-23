@@ -23,6 +23,7 @@ export class HomePage extends BaseComponent {
             <div class="lazy-section-placeholder" data-section-tag="musoci-story" data-section-module="../components/story-section.js" style="min-height: 100vh;"></div>
             <div class="lazy-section-placeholder" data-section-tag="musoci-showcase" data-section-module="../components/content-showcase.js" style="min-height: 100vh;"></div>
             <div class="lazy-section-placeholder" data-section-tag="musoci-opportunities" data-section-module="../components/creator-opportunities.js" style="min-height: 50vh;"></div>
+            <div class="lazy-section-placeholder" data-section-tag="musoci-cta" data-section-module="../components/cta-section.js" style="min-height: 50vh;"></div>
             <div class="lazy-section-placeholder" data-section-tag="musoci-contact" data-section-module="../components/contact-form.js" style="min-height: 50vh;"></div>
             <div class="lazy-section-placeholder" data-section-tag="musoci-partners" data-section-module="../components/partner-section.js" style="min-height: 30vh;"></div>
         `;

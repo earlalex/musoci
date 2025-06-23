@@ -41,6 +41,7 @@ class SubscriptionCard extends BaseComponent {
                 :host {
                     display: flex;
                     padding: 1rem;
+                    align-items: stretch;
                     /* Define variables if they are intended to be configurable from outside
                        or used by multiple rules within this component's shadow DOM.
                        For now, as the component directly uses color values, this change is for correctness
@@ -80,7 +81,8 @@ class SubscriptionCard extends BaseComponent {
                 .card_image img {
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
+                    object-fit: contain;
+                    object-position: center;
                 }
 
                 .card_price {

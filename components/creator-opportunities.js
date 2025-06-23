@@ -88,13 +88,13 @@ export class CreatorOpportunities extends BaseComponent {
                     margin-bottom: 1.5rem;
                 }
                 .opportunity-icon.content {
-                    background-image: url('../media/img/contentdistro.jpg');
+                    background-image: url('../media/img/contentdistro.png');
                 }
                 .opportunity-icon.fan {
-                    background-image: url('../media/img/fanengagement.jpg');
+                    background-image: url('../media/img/fanengagement.png');
                 }
                 .opportunity-icon.monetize {
-                    background-image: url('../media/img/monetizing.jpg');
+                    background-image: url('../media/img/monetization.png');
                 }
                 h3 {
                     font-size: 1.5rem;

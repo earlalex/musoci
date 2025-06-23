@@ -30,7 +30,7 @@ export class ShowcaseCard extends BaseComponent {
                     background: rgba(255,255,255,0.1);
                     padding: 1rem;
                     min-width: 275px;
-                    min-height: fit-content;
+                    min-height: 350px;
                     margin: 1rem;
                     border-radius: 12px;
 

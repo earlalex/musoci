@@ -59,7 +59,7 @@ class SubscriptionsPage extends BaseComponent {
                     <ul class="cards">
                         <li class="cards_item">
                             <subscription-card
-                                imageSrc="../media/img/free-pass.jpg"
+                                imageSrc="../media/img/free-pass.png"
                                 imageAlt="MuSocÍ Free Discovery Pass"
                                 price="Free"
                                 title="MuSocÍ Free Discovery Pass"
@@ -68,7 +68,7 @@ class SubscriptionsPage extends BaseComponent {
                         </li>
                         <li class="cards_item">
                             <subscription-card
-                                imageSrc="../media/img/musoci-member.jpg"
+                                imageSrc="../media/img/musoci-member.png"
                                 imageAlt="MuSocÍ Member"
                                 price="<span>$</span>2.99 mo"
                                 title="MuSocÍ Member"
@@ -77,7 +77,7 @@ class SubscriptionsPage extends BaseComponent {
                         </li>
                         <li class="cards_item">
                             <subscription-card
-                                imageSrc="../media/img/eros-ladder.jpg"
+                                imageSrc="../media/img/eros-ladder.png"
                                 imageAlt="Eros Ladder"
                                 price="<span>$</span>3.99 mo"
                                 title="Eros Ladder"
@@ -89,7 +89,7 @@ class SubscriptionsPage extends BaseComponent {
                     <ul class="cards">
                         <li class="cards_item">
                             <subscription-card
-                                imageSrc="../media/img/playlister.jpg"
+                                imageSrc="../media/img/playlister.png"
                                 imageAlt="Playlister"
                                 price="<span>$</span>29.99yr"
                                 title="Playlister"
@@ -98,7 +98,7 @@ class SubscriptionsPage extends BaseComponent {
                         </li>
                         <li class="cards_item">
                             <subscription-card
-                                imageSrc="../media/img/creators-club.jpg"
+                                imageSrc="../media/img/creators-club.png"
                                 imageAlt="MuSocÍ Creator's Club"
                                 price="<span>$</span>49.99 mo"
                                 title="MuSocÍ Creator's Club"
