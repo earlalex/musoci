@@ -2,7 +2,7 @@ import { BaseComponent } from './base-component.js';
 
 export class ShowcaseCard extends BaseComponent {
     static get observedAttributes() {
-        return ['title', 'description', 'video-src', 'category'];
+        return ['title', 'description', 'video-src', 'category', 'video-position'];
     }
 
     constructor() {
@@ -11,6 +11,7 @@ export class ShowcaseCard extends BaseComponent {
         this._description = '';
         this._videoSrc = '';
         this._category = '';
+        this._videoPosition = '';
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
@@ -21,6 +22,7 @@ export class ShowcaseCard extends BaseComponent {
     }
 
     render() {
+        const videoPositionClass = this._videoPosition ? `video-pos-${this._videoPosition}` : '';
         this.shadowRoot.innerHTML = `
             <style>
                 :host {
@@ -59,6 +61,9 @@ export class ShowcaseCard extends BaseComponent {
                     left: 50%;
                     transform: translateX(-50%) translateY(-50%);
                 }
+                .video-pos-top-100 .thumbnail video {
+                    top: 100%;
+                }
                 h3 {
                     font-size: 1.5rem;
                     margin: 0 0 1rem;
@@ -70,7 +75,7 @@ export class ShowcaseCard extends BaseComponent {
                     line-height: 1.6;
                 }
             </style>
-            <div class="content-card" data-category="${this._category}">
+            <div class="content-card ${videoPositionClass}" data-category="${this._category}">
                 <div class="thumbnail">
                     <video autoplay loop muted playsinline src="${this._videoSrc}"></video>
                 </div>

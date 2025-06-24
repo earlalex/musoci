@@ -51,7 +51,8 @@ export class ContentShowcase extends BaseComponent {
                 title: 'New Music',
                 description: 'Engage with interesting conversation.',
                 videoSrc: './media/vid/musicplaylists.mp4',
-                category: 'audio'
+                category: 'audio',
+                videoPosition: 'top-100'
             },
             {
                 title: 'Pay Per View',
@@ -133,14 +134,16 @@ export class ContentShowcase extends BaseComponent {
                 <div class="carousel-container">
                     <h2>Explore Trending Content</h2>
                     <div class="content-carousel">
-                        ${duplicatedShowcaseData.map(item => `
-                            <musoci-showcase-card
+                        ${duplicatedShowcaseData.map(item => {
+                            const videoPositionAttr = item.videoPosition ? `video-position="${item.videoPosition}"` : '';
+                            return `<musoci-showcase-card
                                 title="${item.title}"
                                 description="${item.description}"
                                 video-src="${item.videoSrc}"
-                                category="${item.category}">
-                            </musoci-showcase-card>
-                        `).join('')}
+                                category="${item.category}"
+                                ${videoPositionAttr}>
+                            </musoci-showcase-card>`;
+                        }).join('')}
                     </div>
                 </div>
             </section>
@@ -190,4 +193,3 @@ export class ContentShowcase extends BaseComponent {
     }
 }
 customElements.define('musoci-showcase', ContentShowcase);
-
