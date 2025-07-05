@@ -3,11 +3,19 @@ import { BaseComponent } from './base-component.js';
 export class CTASection extends BaseComponent {
     constructor() {
         super();
+        this.player = null;
     }
 
     connectedCallback() {
         this.render();
         this.loadPlayerScript();
+    }
+
+    disconnectedCallback() {
+        if (this.player) {
+            this.player.destroy();
+            this.player = null;
+        }
     }
 
     loadPlayerScript() {
@@ -22,16 +30,18 @@ export class CTASection extends BaseComponent {
         script.src = 'https://vod-lb-cdn.tvstartupengine.com/tvs-asset/library/clappr.min.js';
         script.onload = () => this.initPlayer();
         script.onerror = () => console.error('Failed to load the Clappr player script.');
-        this.shadowRoot.appendChild(script);
+        document.head.appendChild(script);
     }
 
     initPlayer() {
         const videoHolder = this.shadowRoot.querySelector('#video_holder');
-        if (videoHolder && typeof Clappr !== 'undefined') {
-            const player = new Clappr.Player({
+        if (videoHolder && typeof Clappr !== 'undefined' && !this.player) {
+            this.player = new Clappr.Player({
                 parent: videoHolder,
                 source: "https://live-us-cdn-2.tvstartupengine.com/live/playlist-prod-48f34a03-64c1-4d53-a8b3-86e30b982038/index.m3u8",
                 autoPlay: true,
+                mute: true,
+                controls: true,
             });
         }
     }

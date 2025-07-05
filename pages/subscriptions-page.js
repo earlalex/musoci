@@ -21,6 +21,10 @@ class SubscriptionsPage extends BaseComponent {
                     justify-content: center; /* Center cards */
                 }
 
+                .card_image {
+                    background-color: var(--card-magenta-purple);
+                }
+
                 .cards_item {
                     display: flex; /* Already in host of subscription-card */
                     padding: 1rem; /* Already in host of subscription-card */
