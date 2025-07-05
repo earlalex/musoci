@@ -7,6 +7,12 @@ import {ContactForm} from './contact-form.js';
 import {PartnerSection} from './partner-section.js';
 import {CreatorOpportunities} from './creator-opportunities.js';
 import {Footer} from './footer.js';
+import {MusociHeroSection} from './musoci-hero-section.js';
+import {MusociWhatIsDifferent} from './musoci-what-is-different.js';
+import {MusociForCreators} from './musoci-for-creators.js';
+import {MusociForFans} from './musoci-for-fans.js';
+import {MusociHowItWorks} from './musoci-how-it-works.js';
+import {MusociMembershipTiers} from './musoci-membership-tiers.js';
 
 export {
     Header,
@@ -17,5 +23,11 @@ export {
     ContactForm,
     PartnerSection,
     CreatorOpportunities,
-    Footer
+    Footer,
+    MusociHeroSection,
+    MusociWhatIsDifferent,
+    MusociForCreators,
+    MusociForFans,
+    MusociHowItWorks,
+    MusociMembershipTiers
 }
