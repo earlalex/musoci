@@ -12,62 +12,65 @@ export class MusociHowItWorks extends BaseComponent {
           display: block;
           text-align: center;
         }
-        .content-section {
-          padding: 40px 20px;
-          background-color: #fff; /* White background */
+        .content-wrapper {
+          padding: 3rem 1rem;
+          text-align: center;
         }
         h2 {
-          font-size: 2em;
-          margin-bottom: 30px; /* More space before steps */
-          color: #2c3e50;
+          font-family: "Poppins", sans-serif;
+          font-size: 2.5rem;
+          margin-bottom: 2rem;
+          color: white;
         }
         .steps-container {
           display: flex;
           justify-content: space-around;
-          flex-wrap: wrap; /* Allow wrapping */
+          flex-wrap: wrap;
+          gap: 1.5rem; /* Gap between step cards */
         }
         .step {
-          flex-basis: 30%; /* Adjust as needed */
-          min-width: 250px; /* Minimum width for steps */
-          padding: 20px;
-          background: #ecf0f1; /* Light grey background for steps */
-          border-radius: 5px;
-          margin: 10px; /* Margin for spacing between cards */
-          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          flex: 1 1 300px; /* Flex grow, shrink, basis. Allows wrapping. */
+          min-width: 280px;
+          padding: 1.5rem;
+          background: rgba(255, 255, 255, 0.08); /* Similar to feature-card but slightly different if needed */
+          border-radius: 10px; /* Consistent with other cards */
+          backdrop-filter: blur(5px); /* Optional: if you want a blur effect */
+          text-align: left; /* Content within card is left-aligned */
         }
         .step h3 {
-          font-size: 1.4em;
-          color: #2980b9; /* Step title color */
-          margin-bottom: 10px;
+          font-family: "Poppins", sans-serif;
+          font-size: 1.5rem; /* Step title size */
+          color: var(--deep-blue); /* Accent color for step titles */
+          margin-bottom: 0.75rem;
         }
         .step p {
-          font-size: 1em;
-          color: #444;
+          font-family: "Open Sans", sans-serif;
+          font-size: 0.95rem;
+          color: #e0e0e0; /* Lighter text for readability on dark card */
+          line-height: 1.6;
         }
-        /* Responsive adjustments */
-        @media (max-width: 992px) { /* Adjust breakpoint for 3 cards */
-            .step {
-                flex-basis: 45%; /* Two cards per row */
-            }
-        }
+
         @media (max-width: 768px) {
+          .content-wrapper {
+            padding: 2rem 1rem;
+          }
           h2 {
-            font-size: 1.8em;
-          }
-          .content-section {
-            padding: 30px 20px;
-          }
-          .steps-container {
-            flex-direction: column;
-            align-items: center;
+            font-size: 2rem;
           }
           .step {
-            flex-basis: 80%; /* Wider on mobile when stacked */
-            margin-bottom: 20px;
+            min-width: calc(100% - 2rem); /* Full width minus some margin */
+            margin-left: 1rem;
+            margin-right: 1rem;
+          }
+          .step h3 {
+            font-size: 1.3rem;
+          }
+          .step p {
+            font-size: 0.9rem;
           }
         }
       </style>
-      <section class="content-section">
+      <section class="content-wrapper">
         <h2>How It Works</h2>
         <div class="steps-container">
           <div class="step">

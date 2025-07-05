@@ -12,89 +12,102 @@ export class MusociForCreators extends BaseComponent {
           display: block;
           text-align: center;
         }
-        .content-section {
-          padding: 40px 20px;
-          background-color: #fff; /* White background */
+        .content-wrapper {
+          padding: 3rem 1rem;
+          text-align: center;
+          /* Assuming dark theme from global styles */
         }
         h2 {
-          font-size: 2em;
-          margin-bottom: 10px;
-          color: #2c3e50;
+          font-family: "Poppins", sans-serif;
+          font-size: 2.5rem;
+          margin-bottom: 0.5rem; /* Less margin if subheadline follows */
+          color: white;
         }
         .subheadline {
-          font-size: 1.3em;
-          color: #555;
-          margin-bottom: 20px;
+          font-family: "Open Sans", sans-serif;
+          font-size: 1.2rem;
           font-style: italic;
+          color: #cccccc; /* Lighter grey for subheadline */
+          margin-bottom: 1.5rem;
         }
         p {
-          font-size: 1em;
-          margin-bottom: 15px;
-          color: #444;
-          max-width: 800px;
+          font-family: "Open Sans", sans-serif;
+          font-size: 1rem;
+          line-height: 1.6;
+          margin-bottom: 1rem;
+          max-width: 750px;
           margin-left: auto;
           margin-right: auto;
+          color: #f0f0f0;
         }
         .highlights {
-          margin-top: 20px;
-          margin-bottom: 30px;
-          text-align: left; /* Align highlights to the left for easier reading */
-          display: inline-block; /* Center the block itself */
+          margin-top: 1.5rem;
+          margin-bottom: 2rem;
+          text-align: left;
+          display: inline-block;
         }
         .highlights h3 {
-          font-size: 1.5em;
-          margin-bottom: 15px;
-          color: #3498db; /* Accent color */
-          text-align: center; /* Center the "Highlights" title */
+          font-family: "Poppins", sans-serif;
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+          color: var(--deep-blue); /* Using global variable */
+          text-align: center;
         }
         .highlights ul {
           list-style: none;
           padding: 0;
         }
         .highlights ul li {
-          font-size: 1em;
-          margin-bottom: 10px;
+          font-family: "Open Sans", sans-serif;
+          font-size: 1rem;
+          margin-bottom: 0.75rem;
           display: flex;
           align-items: center;
+          color: #f0f0f0;
         }
         .highlights .icon {
-          margin-right: 10px;
-          color: #3498db; /* Icon color */
+          margin-right: 0.75rem;
+          color: var(--deep-blue); /* Using global variable */
+          /* Consider using SVGs or an icon font that inherits color */
         }
         .cta-button {
-          display: inline-block;
-          background: #e74c3c; /* Primary CTA color */
-          color: #fff;
-          padding: 12px 25px;
-          text-decoration: none;
-          border-radius: 5px;
-          font-size: 1.1em;
-          margin-top: 10px;
-          transition: background-color 0.3s ease;
+          /* Mimicking global .cta-button styles */
+          display: inline-block; /* Added to make it behave like a block for margin auto */
+          padding: 1rem 2rem;
+          font-family: "Montserrat", sans-serif;
+          background: var(--gradient);
+          border: none;
+          border-radius: 25px;
+          color: white;
+          cursor: pointer;
+          text-decoration: none; /* Ensure links look like buttons */
+          transition: transform 0.3s ease;
+          margin-top: 1rem; /* Space above button */
         }
         .cta-button:hover {
-          background: #c0392b; /* Darker shade on hover */
+          transform: scale(1.05);
         }
         /* Responsive adjustments */
         @media (max-width: 768px) {
+          .content-wrapper {
+            padding: 2rem 1rem;
+          }
           h2 {
-            font-size: 1.8em;
+            font-size: 2rem;
           }
           .subheadline {
-            font-size: 1.1em;
-          }
-          .content-section {
-            padding: 30px 20px;
+            font-size: 1.1rem;
           }
           .highlights {
-            text-align: center; /* Center highlight text on mobile */
+            text-align: center;
           }
           .highlights ul li {
-            justify-content: center; /* Center list items */
+            justify-content: center;
+            font-size: 0.95rem;
           }
         }
       </style>
-      <section class="content-section">
+      <section class="content-wrapper">
         <h2>Upload. Stream. Monetize.</h2>
         <p class="subheadline">A streaming platform designed for creators, by creators.</p>
         <p>MuSóci puts your content in front of real fans—on real screens.</p>

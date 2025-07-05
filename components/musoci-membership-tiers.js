@@ -12,67 +12,75 @@ export class MusociMembershipTiers extends BaseComponent {
           display: block;
           text-align: center;
         }
-        .content-section {
-          padding: 40px 20px;
-          background-color: #f4f4f4; /* Light background */
+        .content-wrapper {
+          padding: 3rem 1rem;
+          text-align: center;
         }
         h2 {
-          font-size: 2em;
-          margin-bottom: 30px;
-          color: #2c3e50;
+          font-family: "Poppins", sans-serif;
+          font-size: 2.5rem;
+          margin-bottom: 2rem;
+          color: white;
         }
         .tiers-visual {
           display: flex;
-          justify-content: space-around;
+          justify-content: space-evenly; /* Evenly space the items */
           align-items: center;
           flex-wrap: wrap;
-          margin-bottom: 30px;
+          gap: 1.5rem; /* Gap between logos */
+          margin-bottom: 2.5rem;
         }
         .tier-logo {
-          padding: 20px;
-          background: #bdc3c7; /* Placeholder background */
-          color: #fff;
-          border-radius: 5px;
-          min-width: 150px;
+          padding: 1.5rem;
+          background: rgba(255, 255, 255, 0.08); /* Consistent with other cards */
+          color: #e0e0e0; /* Light text for placeholder */
+          border-radius: 8px;
+          min-width: 180px; /* Min width for each logo placeholder */
+          max-width: 220px; /* Max width */
+          flex: 1 1 180px; /* Flex properties */
           text-align: center;
-          margin: 10px; /* Margin for spacing */
-          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          font-family: "Open Sans", sans-serif;
         }
         .tier-logo span {
-          font-size: 0.9em;
+          font-size: 1rem;
+          font-weight: bold;
         }
         .cta-button {
           display: inline-block;
-          background: #e74c3c; /* Primary CTA color */
-          color: #fff;
-          padding: 12px 25px;
+          padding: 1rem 2rem;
+          font-family: "Montserrat", sans-serif;
+          background: var(--gradient);
+          border: none;
+          border-radius: 25px;
+          color: white;
+          cursor: pointer;
           text-decoration: none;
-          border-radius: 5px;
-          font-size: 1.1em;
-          margin-top: 10px;
-          transition: background-color 0.3s ease;
+          transition: transform 0.3s ease;
+          margin-top: 1rem;
         }
         .cta-button:hover {
-          background: #c0392b; /* Darker shade on hover */
+          transform: scale(1.05);
         }
         /* Responsive adjustments */
         @media (max-width: 768px) {
+          .content-wrapper {
+            padding: 2rem 1rem;
+          }
           h2 {
-            font-size: 1.8em;
-          }
-          .content-section {
-            padding: 30px 20px;
-          }
-          .tiers-visual {
-            flex-direction: column;
+            font-size: 2rem;
           }
           .tier-logo {
-            min-width: 200px; /* Wider on mobile when stacked */
-            margin-bottom: 15px;
+            min-width: 150px;
+            flex-basis: calc(50% - 1rem); /* Two items per row on smaller screens */
           }
         }
+        @media (max-width: 480px) {
+            .tier-logo {
+                flex-basis: calc(100% - 1rem); /* One item per row on very small screens */
+            }
+        }
       </style>
-      <section class="content-section">
+      <section class="content-wrapper">
         <h2>Pick Your Power. Start Creating.</h2>
         <div class="tiers-visual">
           <div class="tier-logo"><span>[Discovery Pass Logo]</span></div>
