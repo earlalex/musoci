@@ -12,89 +12,102 @@ export class MusociForFans extends BaseComponent {
           display: block;
           text-align: center;
         }
-        .content-section {
-          padding: 40px 20px;
-          background-color: #f4f4f4; /* Light background */
+        .content-wrapper {
+          padding: 3rem 1rem;
+          text-align: center;
+           /* background-color: #f0f0f0; /* Example if this section needs a light background variant */
+           /* color: #333; */
+           /* For dark theme, these would be var(--black) and white, or inherited */
         }
         h2 {
-          font-size: 2em;
-          margin-bottom: 10px;
-          color: #2c3e50;
+          font-family: "Poppins", sans-serif;
+          font-size: 2.5rem;
+          margin-bottom: 0.5rem;
+          color: white; /* Or inherit if :host is styled for dark theme */
         }
         .subheadline {
-          font-size: 1.3em;
-          color: #555;
-          margin-bottom: 20px;
+          font-family: "Open Sans", sans-serif;
+          font-size: 1.2rem;
           font-style: italic;
+          color: #cccccc; /* Or a lighter color if on dark bg */
+          margin-bottom: 1.5rem;
         }
         p {
-          font-size: 1em;
-          margin-bottom: 15px;
-          color: #444;
-          max-width: 800px;
+          font-family: "Open Sans", sans-serif;
+          font-size: 1rem;
+          line-height: 1.6;
+          margin-bottom: 1rem;
+          max-width: 750px;
           margin-left: auto;
           margin-right: auto;
+          color: #f0f0f0; /* Or inherit */
         }
         .highlights {
-          margin-top: 20px;
-          margin-bottom: 30px;
-          text-align: left; /* Align highlights to the left */
-          display: inline-block; /* Center the block */
+          margin-top: 1.5rem;
+          margin-bottom: 2rem;
+          text-align: left;
+          display: inline-block;
         }
         .highlights h3 {
-          font-size: 1.5em;
-          margin-bottom: 15px;
-          color: #3498db; /* Accent color */
-          text-align: center; /* Center "Quick Highlights" */
+          font-family: "Poppins", sans-serif;
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+          color: var(--deep-blue); /* Global variable */
+          text-align: center;
         }
         .highlights ul {
           list-style: none;
           padding: 0;
         }
         .highlights ul li {
-          font-size: 1em;
-          margin-bottom: 10px;
+          font-family: "Open Sans", sans-serif;
+          font-size: 1rem;
+          margin-bottom: 0.75rem;
           display: flex;
           align-items: center;
+          color: #f0f0f0; /* Or inherit */
         }
         .highlights .icon {
-          margin-right: 10px;
-          color: #3498db; /* Icon color */
+          margin-right: 0.75rem;
+          color: var(--deep-blue); /* Global variable */
         }
         .cta-button {
           display: inline-block;
-          background: #e74c3c; /* Primary CTA color */
-          color: #fff;
-          padding: 12px 25px;
+          padding: 1rem 2rem;
+          font-family: "Montserrat", sans-serif;
+          background: var(--gradient);
+          border: none;
+          border-radius: 25px;
+          color: white;
+          cursor: pointer;
           text-decoration: none;
-          border-radius: 5px;
-          font-size: 1.1em;
-          margin-top: 10px;
-          transition: background-color 0.3s ease;
+          transition: transform 0.3s ease;
+          margin-top: 1rem;
         }
         .cta-button:hover {
-          background: #c0392b; /* Darker shade on hover */
+          transform: scale(1.05);
         }
         /* Responsive adjustments */
         @media (max-width: 768px) {
+          .content-wrapper {
+            padding: 2rem 1rem;
+          }
           h2 {
-            font-size: 1.8em;
+            font-size: 2rem;
           }
           .subheadline {
-            font-size: 1.1em;
-          }
-          .content-section {
-            padding: 30px 20px;
+            font-size: 1.1rem;
           }
           .highlights {
-            text-align: center; /* Center highlight text on mobile */
+            text-align: center;
           }
           .highlights ul li {
-            justify-content: center; /* Center list items */
+            justify-content: center;
+            font-size: 0.95rem;
           }
         }
       </style>
-      <section class="content-section">
+      <section class="content-wrapper">
         <h2>Watch Creators Rise—Because of You.</h2>
         <p class="subheadline">You’re not just a viewer. You’re the algorithm.</p>
         <p>Vote on new talent. Watch exclusive content. Influence who gets featured next.</p>
