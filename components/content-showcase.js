@@ -71,10 +71,13 @@ export class ContentShowcase extends BaseComponent {
                 :host {
                     display: block;
                     width: 100%;
+                    border-bottom: 1px solid #fff;
+                    border-top: 1px solid #fff;
                 }
                 .carousel-container {
                     overflow: hidden;
                     padding: 0 1rem;
+                    padding-bottom: 2rem;
                     width: 100%;
                     box-sizing: border-box;
                 }
@@ -98,7 +101,7 @@ export class ContentShowcase extends BaseComponent {
                         animation: scrollLeft 30s linear infinite;
                     }
                     .carousel-container {
-                        padding: 0 2rem;
+                        padding: 2rem;
                     }
                 }
 

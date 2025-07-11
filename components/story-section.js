@@ -11,6 +11,8 @@ export class StorySection extends BaseComponent {
                 :host {
                     display: block;
                     width: 100%;
+                    border-bottom: 1px solid #fff;
+                    border-top: 1px solid #fff;
                 }
 
                 .story-section {

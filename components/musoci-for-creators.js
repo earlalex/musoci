@@ -11,17 +11,21 @@ export class MusociForCreators extends BaseComponent {
         :host {
           display: block;
           text-align: center;
+          border-bottom: 1px solid #fff;
+          border-top: 1px solid #fff;
         }
         .content-wrapper {
-          padding: 3rem 1rem;
-          text-align: center;
-          /* Assuming dark theme from global styles */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 4rem;
         }
         h2 {
           font-family: "Poppins", sans-serif;
-          font-size: 2.5rem;
           margin-bottom: 0.5rem; /* Less margin if subheadline follows */
           color: white;
+          text-align: center; /* Centered for consistency */
         }
         .subheadline {
           font-family: "Open Sans", sans-serif;
@@ -43,7 +47,7 @@ export class MusociForCreators extends BaseComponent {
         .highlights {
           margin-top: 1.5rem;
           margin-bottom: 2rem;
-          text-align: left;
+          text-align: center;
           display: inline-block;
         }
         .highlights h3 {
@@ -68,7 +72,15 @@ export class MusociForCreators extends BaseComponent {
         .highlights .icon {
           margin-right: 0.75rem;
           color: var(--deep-blue); /* Using global variable */
-          /* Consider using SVGs or an icon font that inherits color */
+        }
+        .highlights .icon svg {
+          width: 20px;
+          height: 20px;
+          vertical-align: middle;
+        }
+        .cta-wrapper {
+          text-align: center; /* Center the CTA button */
+          margin-top: 2rem; /* Space above the button */
         }
         .cta-button {
           /* Mimicking global .cta-button styles */
@@ -89,12 +101,6 @@ export class MusociForCreators extends BaseComponent {
         }
         /* Responsive adjustments */
         @media (max-width: 768px) {
-          .content-wrapper {
-            padding: 2rem 1rem;
-          }
-          h2 {
-            font-size: 2rem;
-          }
           .subheadline {
             font-size: 1.1rem;
           }
@@ -107,6 +113,7 @@ export class MusociForCreators extends BaseComponent {
           }
         }
       </style>
+      <link rel="stylesheet" type="text/css" href="/styles.css">
       <section class="content-wrapper">
         <h2>Upload. Stream. Monetize.</h2>
         <p class="subheadline">A streaming platform designed for creators, by creators.</p>
@@ -116,19 +123,31 @@ export class MusociForCreators extends BaseComponent {
         <div class="highlights">
           <h3>Highlights:</h3>
           <ul>
-            <li><span class="icon">[Icon]</span> Submit music, film, or podcasts</li>
-            <li><span class="icon">[Icon]</span> Broadcast to Roku, Fire TV, iOS</li>
-            <li><span class="icon">[Icon]</span> Fans vote your content into Primetime</li>
-            <li><span class="icon">[Icon]</span> Get paid for streams, views, subscriptions</li>
-            <li><span class="icon">[Icon]</span> Monthly analytics to track your growth</li>
-            <li><span class="icon">[Icon]</span> Keep creative control, not just exposure</li>
+            <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg></span> Submit music, film, or podcasts</li>
+            <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg></span> Broadcast to Roku, Fire TV, iOS</li>
+            <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg></span> Fans vote your content into Primetime</li>
+            <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span> Get paid for streams, views, subscriptions</li>
+            <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg></span> Monthly analytics to track your growth</li>
+            <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg></span> Keep creative control, not just exposure</li>
           </ul>
         </div>
-        <div>
-            <a href="#" class="cta-button">See Creator Plans</a>
+        <div class="cta-wrapper">
+            <a data-navigate-to="subscriptions" class="cta-button">See Creator Plans</a>
         </div>
       </section>
     `;
+    this.shadowRoot.querySelector('a[data-navigate-to]').addEventListener('click', (event) => {
+        event.preventDefault();
+        const routeName = event.currentTarget.dataset.navigateTo;
+        if (routeName) {
+            // Dispatch a custom event that the MusociApp will listen for
+            this.dispatchEvent(new CustomEvent('navigate', {
+                detail: { routeName },
+                bubbles: true,    // Allow the event to bubble up through the DOM
+                composed: true  // Allow the event to cross Shadow DOM boundaries
+            }));
+        }
+    });
   }
 }
 

@@ -26,16 +26,13 @@ export class HomePage extends BaseComponent {
         this.shadowRoot.innerHTML =`
             <musoci-intro></musoci-intro>
             <musoci-story></musoci-story>
-            <musoci-showcase></musoci-showcase>
-
-            <!-- New Sections Added Here -->
             <musoci-hero-section></musoci-hero-section>
+            <musoci-showcase></musoci-showcase>
             <musoci-what-is-different></musoci-what-is-different>
             <musoci-for-creators></musoci-for-creators>
             <musoci-for-fans></musoci-for-fans>
             <musoci-how-it-works></musoci-how-it-works>
             <musoci-membership-tiers></musoci-membership-tiers>
-
             <musoci-opportunities></musoci-opportunities>
             <musoci-cta></musoci-cta>
             <musoci-contact></musoci-contact>

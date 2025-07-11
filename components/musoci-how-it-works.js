@@ -10,15 +10,20 @@ export class MusociHowItWorks extends BaseComponent {
       <style>
         :host {
           display: block;
-          text-align: center;
+          text-align: left;
+          background: var(--gradient);
+          border-bottom: 1px solid #fff;
+          border-top: 1px solid #fff;
         }
         .content-wrapper {
-          padding: 3rem 1rem;
-          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 4rem;
         }
         h2 {
           font-family: "Poppins", sans-serif;
-          font-size: 2.5rem;
           margin-bottom: 2rem;
           color: white;
         }
@@ -40,7 +45,7 @@ export class MusociHowItWorks extends BaseComponent {
         .step h3 {
           font-family: "Poppins", sans-serif;
           font-size: 1.5rem; /* Step title size */
-          color: var(--deep-blue); /* Accent color for step titles */
+          color: #fff;
           margin-bottom: 0.75rem;
         }
         .step p {
@@ -51,12 +56,6 @@ export class MusociHowItWorks extends BaseComponent {
         }
 
         @media (max-width: 768px) {
-          .content-wrapper {
-            padding: 2rem 1rem;
-          }
-          h2 {
-            font-size: 2rem;
-          }
           .step {
             min-width: calc(100% - 2rem); /* Full width minus some margin */
             margin-left: 1rem;
@@ -70,6 +69,7 @@ export class MusociHowItWorks extends BaseComponent {
           }
         }
       </style>
+      <link rel="stylesheet" type="text/css" href="/styles.css">
       <section class="content-wrapper">
         <h2>How It Works</h2>
         <div class="steps-container">

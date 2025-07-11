@@ -10,15 +10,18 @@ export class MusociMembershipTiers extends BaseComponent {
       <style>
         :host {
           display: block;
-          text-align: center;
+          text-align: left;
+          border-bottom: 1px solid #fff;
+          border-top: 1px solid #fff;
         }
         .content-wrapper {
-          padding: 3rem 1rem;
-          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 4rem;
         }
         h2 {
-          font-family: "Poppins", sans-serif;
-          font-size: 2.5rem;
           margin-bottom: 2rem;
           color: white;
         }
@@ -38,12 +41,15 @@ export class MusociMembershipTiers extends BaseComponent {
           min-width: 180px; /* Min width for each logo placeholder */
           max-width: 220px; /* Max width */
           flex: 1 1 180px; /* Flex properties */
-          text-align: center;
+          text-align: left;
           font-family: "Open Sans", sans-serif;
         }
-        .tier-logo span {
-          font-size: 1rem;
-          font-weight: bold;
+        .tier-logo img {
+          width: 100%; /* Make the image responsive */
+          }
+        .cta-wrapper {
+          text-align: center; /* Center the CTA button */
+          margin-top: 2rem; /* Space above the button */
         }
         .cta-button {
           display: inline-block;
@@ -63,12 +69,6 @@ export class MusociMembershipTiers extends BaseComponent {
         }
         /* Responsive adjustments */
         @media (max-width: 768px) {
-          .content-wrapper {
-            padding: 2rem 1rem;
-          }
-          h2 {
-            font-size: 2rem;
-          }
           .tier-logo {
             min-width: 150px;
             flex-basis: calc(50% - 1rem); /* Two items per row on smaller screens */
@@ -80,15 +80,18 @@ export class MusociMembershipTiers extends BaseComponent {
             }
         }
       </style>
+      <link rel="stylesheet" type="text/css" href="/styles.css">
       <section class="content-wrapper">
         <h2>Pick Your Power. Start Creating.</h2>
         <div class="tiers-visual">
-          <div class="tier-logo"><span>[Discovery Pass Logo]</span></div>
-          <div class="tier-logo"><span>[MuSóci Member Logo]</span></div>
-          <div class="tier-logo"><span>[Playlister Logo]</span></div>
-          <div class="tier-logo"><span>[VIP Creator Club Logo]</span></div>
+          <div class="tier-logo"><img src="/media/img/free-pass.png" alt="Discovery Pass Logo"></div>
+          <div class="tier-logo"><img src="/media/img/musoci-member.png" alt="MuSóci Member Logo"></div>
+          <div class="tier-logo"><img src="/media/img/playlister.png" alt="Playlister Logo"></div>
+          <div class="tier-logo"><img src="/media/img/creators-club.png" alt="VIP Creator Club Logo"></div>
         </div>
-        <a href="#" class="cta-button">See Membership Options</a>
+        <div class="cta-wrapper">
+          <a href="https://musocitvnetwork.tvspublishingservice.com/sign-up.html?channelId=6ee8f081-d92c-4680-b12c-96d9884e6b06" class="cta-button">Choose Your Membership</a>
+        </div>
       </section>
     `;
   }

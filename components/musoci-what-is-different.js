@@ -10,20 +10,23 @@ export class MusociWhatIsDifferent extends BaseComponent {
       <style>
         :host {
           display: block;
-          text-align: center;
+          text-align: left;
+          border-bottom: 1px solid #fff;
+          border-top: 1px solid #fff;
         }
         /* Adopting global dark theme. Remove background-color if :host should be transparent to page bg */
         .content-wrapper {
-          padding: 3rem 1rem; /* Consistent section padding */
-          text-align: center;
-          /* background-color: var(--black); /* Assuming this section follows the global dark theme */
-          /* color: white; /* Assuming this section follows the global dark theme */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 4rem;
         }
         h2 {
           font-family: "Poppins", sans-serif; /* Global h1 uses Poppins */
-          font-size: 2.5rem; /* Typical h2 size */
           margin-bottom: 1.5rem; /* Spacing */
           color: white; /* Explicitly white for dark theme */
+          text-align: center; /* Centered for consistency with other sections */
         }
         p {
           font-family: "Open Sans", sans-serif; /* Global body font */
@@ -38,19 +41,24 @@ export class MusociWhatIsDifferent extends BaseComponent {
         p strong {
             color: white; /* Ensure strong text is clearly visible */
         }
+        .logo-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-top: 2rem; /* Space between text and logo */
+          width: 200px
+        }
+        .logo-wrapper img {
+          width: 100%; /* Make logo responsive */
+          height: auto; /* Maintain aspect ratio */
+        }    
          /* Responsive adjustments */
         @media (max-width: 768px) {
-          .content-wrapper {
-            padding: 2rem 1rem;
-          }
-          h2 {
-            font-size: 2rem;
-          }
           p {
             font-size: 0.95rem;
           }
         }
       </style>
+      <link rel="stylesheet" type="text/css" href="/styles.css">
       <section class="content-wrapper">
         <h2>The Streaming Revolution Starts With You</h2>
         <p>MuSóci is the next-generation streaming platform built for independent creators—and powered by the fans who believe in them. We blend bold content with real interaction, offering more than just streaming: we deliver connection.</p>
@@ -58,7 +66,9 @@ export class MusociWhatIsDifferent extends BaseComponent {
         <p>This isn’t just another platform.</p>
         <p>It’s a launchpad for indie voices—where visionary storytellers can finally turn followers into revenue and fans into collaborators.</p>
         <p><strong>Discover. Vote. Stream. Support.</strong></p>
-        <p><strong>Only on MuSóci.</strong></p>
+        <p><strong>Only on MuSóci.</strong></p>        <div class="logo-wrapper">
+          <img src="/media/img/logos/musoci-logo.png" alt="Logo Image">
+        </div>
       </section>
     `;
   }

@@ -43,6 +43,16 @@ export class CTASection extends BaseComponent {
                 mute: true,
                 controls: true,
             });
+            this.player.on(Clappr.Events.PLAYER_READY, () => {
+                // After the player is ready, check if it's paused.
+                // The `autoPlay` might have been blocked by the browser.
+                if (this.player.is(Clappr.State.PAUSED)) {
+                    // If it's paused, attempt a "ghost click" on the container
+                    // to trigger play. Clappr often attaches a play/pause
+                    // handler to its main container.
+                    videoHolder.click();
+                }
+            });
         }
     }
 
@@ -59,6 +69,8 @@ export class CTASection extends BaseComponent {
                         var(--deep-blue) 0%,
                         var(--magenta-purple) 100%
                     );
+                    border-bottom: 1px solid #fff;
+                    border-top: 1px solid #fff;
                 }
                 .cta-section {
                     display: flex;

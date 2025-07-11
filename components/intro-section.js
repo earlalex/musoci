@@ -45,17 +45,13 @@ export class IntroSection extends BaseComponent {
         <br/>
         <h2>The Evolution of Entertainment</h2>
         <p>
-          Immerse yourself in a vibrant hub where music, movies, podcasts, & social media come together. 
-          Enjoy curated playlists, exclusive behind-the-scenes content, LIVE performances and engaging 
-          podcasts that dive into the latest trends, interviews, and cultural phenomena.
+          Step into a vibrant world where music, movies, podcasts, and social media collide. From boundary-breaking films and intimate podcasts to raw performances and live fan-driven moments, MuSócit isn’t just content—it’s connection.
         </p>
+        <h3>This isn’t passive watching. It’s curated. It’s interactive. It’s personal.</h3>
         <p>
-          Plus--your voice matters! Leave feedback for your favorite influencers as they share their 
-          stories and insights for a heightened experience!. Whether you're a movie buff, a music lover, 
-          or seeking something fresh, MuSocí is your go-to destination for a cutting edge entertainment 
-          adventure. Join us and experience the next generation of storytelling, creativity, and 
-          interaction reimagined!
+          Here,  you don’t just watch — you participate. Leave feedback, vote on collaborations, and connect directly with your favorite creators as they share their journey with you. Whether you’re a music head, a film junkie, or just craving something real,
         </p>
+        <h4>MuSóci is your gateway to a new kind of entertainment—powered by creators, driven by fans, and built for what’s next.</h4>
         <br/>
       </section>
     `;

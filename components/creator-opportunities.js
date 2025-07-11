@@ -10,6 +10,8 @@ export class CreatorOpportunities extends BaseComponent {
                 :host {
                     display: block;
                     width: 100%;
+                    border-bottom: 1px solid #fff;
+                    border-top: 1px solid #fff;
                 }
                 .creative-section {
                     display: flex;

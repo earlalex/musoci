@@ -10,18 +10,19 @@ export class MusociForFans extends BaseComponent {
       <style>
         :host {
           display: block;
-          text-align: center;
+          text-align: left;
+          border-bottom: 1px solid #fff;
+          border-top: 1px solid #fff;
         }
         .content-wrapper {
-          padding: 3rem 1rem;
-          text-align: center;
-           /* background-color: #f0f0f0; /* Example if this section needs a light background variant */
-           /* color: #333; */
-           /* For dark theme, these would be var(--black) and white, or inherited */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 4rem;
         }
         h2 {
           font-family: "Poppins", sans-serif;
-          font-size: 2.5rem;
           margin-bottom: 0.5rem;
           color: white; /* Or inherit if :host is styled for dark theme */
         }
@@ -71,6 +72,15 @@ export class MusociForFans extends BaseComponent {
           margin-right: 0.75rem;
           color: var(--deep-blue); /* Global variable */
         }
+        .highlights .icon svg {
+          width: 20px;
+          height: 20px;
+          vertical-align: middle;
+        }
+        .cta-wrapper {
+          text-align: center; /* Center the CTA button */
+          margin-top: 2rem; /* Space above the button */
+        }
         .cta-button {
           display: inline-block;
           padding: 1rem 2rem;
@@ -89,17 +99,11 @@ export class MusociForFans extends BaseComponent {
         }
         /* Responsive adjustments */
         @media (max-width: 768px) {
-          .content-wrapper {
-            padding: 2rem 1rem;
-          }
-          h2 {
-            font-size: 2rem;
-          }
           .subheadline {
             font-size: 1.1rem;
           }
           .highlights {
-            text-align: center;
+            text-align: left;
           }
           .highlights ul li {
             justify-content: center;
@@ -107,6 +111,7 @@ export class MusociForFans extends BaseComponent {
           }
         }
       </style>
+      <link rel="stylesheet" type="text/css" href="/styles.css">
       <section class="content-wrapper">
         <h2>Watch Creators Rise—Because of You.</h2>
         <p class="subheadline">You’re not just a viewer. You’re the algorithm.</p>
@@ -116,14 +121,14 @@ export class MusociForFans extends BaseComponent {
         <div class="highlights">
           <h3>Quick Highlights:</h3>
           <ul>
-            <li><span class="icon">[Icon]</span> Browse music videos, short films, and series</li>
-            <li><span class="icon">[Icon]</span> Vote for your favorite creators</li>
-            <li><span class="icon">[Icon]</span> Influence the MuSóci charts</li>
-            <li><span class="icon">[Icon]</span> Early access and rewards for top fans</li>
+            <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></span> Browse music videos, short films, and series</li>
+            <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></span> Vote for your favorite creators</li>
+            <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></span> Influence the MuSóci charts</li>
+            <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span> Early access and rewards for top fans</li>
           </ul>
         </div>
-        <div>
-            <a href="#" class="cta-button">Explore Content</a>
+        <div class="cta-wrapper">
+            <a href="https://apps.apple.com/us/app/indie-talent-network/id6740873420" class="cta-button">Explore Content</a>
         </div>
       </section>
     `;
